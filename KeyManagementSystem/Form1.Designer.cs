@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            button2 = new Button();
+            label5 = new Label();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -37,6 +39,8 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label4 = new Label();
+            checkBox1 = new CheckBox();
+            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -45,12 +49,40 @@
             // 
             panel1.BackColor = SystemColors.GradientActiveCaption;
             panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(label5);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(360, 564);
             panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(30, 62, 134);
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.CornflowerBlue;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(42, 501);
+            button2.Name = "button2";
+            button2.Size = new Size(272, 30);
+            button2.TabIndex = 2;
+            button2.Text = "SIGNUP";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(109, 469);
+            label5.Name = "label5";
+            label5.Size = new Size(131, 14);
+            label5.TabIndex = 1;
+            label5.Text = "Register Your Account";
             // 
             // pictureBox1
             // 
@@ -129,6 +161,35 @@
             label4.TabIndex = 5;
             label4.Text = "Password :";
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.BackColor = Color.Transparent;
+            checkBox1.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox1.ForeColor = Color.White;
+            checkBox1.Location = new Point(601, 387);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(112, 18);
+            checkBox1.TabIndex = 7;
+            checkBox1.Text = "Show Password";
+            checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.GradientActiveCaption;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.CornflowerBlue;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(468, 423);
+            button1.Name = "button1";
+            button1.Size = new Size(106, 30);
+            button1.TabIndex = 8;
+            button1.Text = "LOGIN";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -137,6 +198,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(830, 564);
+            Controls.Add(button1);
+            Controls.Add(checkBox1);
             Controls.Add(textBox2);
             Controls.Add(label4);
             Controls.Add(textBox1);
@@ -149,6 +212,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -164,5 +228,9 @@
         private PictureBox pictureBox1;
         private TextBox textBox2;
         private Label label4;
+        private CheckBox checkBox1;
+        private Button button1;
+        private Button button2;
+        private Label label5;
     }
 }
