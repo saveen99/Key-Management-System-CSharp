@@ -167,7 +167,7 @@
             checkBox1.BackColor = Color.Transparent;
             checkBox1.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBox1.ForeColor = Color.White;
-            checkBox1.Location = new Point(601, 387);
+            checkBox1.Location = new Point(597, 375);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(112, 18);
             checkBox1.TabIndex = 7;
@@ -183,9 +183,9 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(468, 423);
+            button1.Location = new Point(468, 404);
             button1.Name = "button1";
-            button1.Size = new Size(106, 30);
+            button1.Size = new Size(106, 25);
             button1.TabIndex = 8;
             button1.Text = "LOGIN";
             button1.UseVisualStyleBackColor = false;
