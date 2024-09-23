@@ -72,16 +72,17 @@
             login_signupBtn.TabIndex = 2;
             login_signupBtn.Text = "SIGNUP";
             login_signupBtn.UseVisualStyleBackColor = false;
+            login_signupBtn.Click += login_signupBtn_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Tahoma", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(109, 469);
+            label5.Location = new Point(108, 475);
             label5.Name = "label5";
-            label5.Size = new Size(131, 14);
+            label5.Size = new Size(129, 14);
             label5.TabIndex = 1;
-            label5.Text = "Register Your Account";
+            label5.Text = "Register your Account";
             // 
             // pictureBox1
             // 
@@ -105,6 +106,7 @@
             exit.Size = new Size(17, 18);
             exit.TabIndex = 1;
             exit.Text = "X";
+            exit.Click += exit_Click;
             // 
             // label2
             // 
