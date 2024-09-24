@@ -59,6 +59,7 @@
             signup_btn.TabIndex = 17;
             signup_btn.Text = "SIGNUP";
             signup_btn.UseVisualStyleBackColor = false;
+            signup_btn.Click += signup_btn_Click;
             // 
             // signup_ShowPass
             // 
@@ -72,6 +73,7 @@
             signup_ShowPass.TabIndex = 16;
             signup_ShowPass.Text = "Show Password";
             signup_ShowPass.UseVisualStyleBackColor = false;
+            signup_ShowPass.CheckedChanged += signup_ShowPass_CheckedChanged;
             // 
             // signup_password
             // 
@@ -79,6 +81,7 @@
             signup_password.Location = new Point(474, 339);
             signup_password.Multiline = true;
             signup_password.Name = "signup_password";
+            signup_password.PasswordChar = '*';
             signup_password.Size = new Size(241, 30);
             signup_password.TabIndex = 15;
             // 
