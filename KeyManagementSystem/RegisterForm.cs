@@ -39,7 +39,7 @@ namespace KeyManagementSystem
             signup_password.PasswordChar = signup_ShowPass.Checked ? '\0' : '*';
         }
 
-        private void signup_btn_Click(object sender, EventArgs e)
+        private void signup_btn_Click(object sender, EventArgs e )
         {
             if (signup_username.Text == "" || signup_password.Text == "") 
             {
@@ -51,14 +51,15 @@ namespace KeyManagementSystem
                 {
                     try
                     {
-
-                    }catch (Exception ex)
+                        connect.Open();
+                    }
+                    catch (Exception ex)
                     {
-
+                        MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
-                        MessageBox.Show("Please fill blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        connect.Close();
                     }
                 }
             }
