@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 
 namespace KeyManagementSystem
@@ -39,15 +30,15 @@ namespace KeyManagementSystem
             signup_password.PasswordChar = signup_ShowPass.Checked ? '\0' : '*';
         }
 
-        private void signup_btn_Click(object sender, EventArgs e )
+        private void signup_btn_Click(object sender, EventArgs e)
         {
-            if (signup_username.Text == "" || signup_password.Text == "") 
+            if (signup_username.Text == "" || signup_password.Text == "")
             {
                 MessageBox.Show("Please fill blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if(connect.State != ConnectionState.Open)
+                if (connect.State != ConnectionState.Open)
                 {
                     try
                     {
