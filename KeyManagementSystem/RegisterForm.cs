@@ -34,7 +34,8 @@ namespace KeyManagementSystem
         {
             if (signup_username.Text == "" || signup_password.Text == "")
             {
-                MessageBox.Show("Please fill blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill blank fields", "Error Message"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -85,7 +86,8 @@ namespace KeyManagementSystem
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error: " + ex, "Error Message"
+                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
