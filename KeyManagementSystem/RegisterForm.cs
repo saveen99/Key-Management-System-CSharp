@@ -43,20 +43,45 @@ namespace KeyManagementSystem
                     try
                     {
                         connect.Open();
-                        DateTime today = DateTime.Today;
+                        //To Check if the User is Exsisting Already
+                        string selectusername = "SELECT COUNT(id) FROM users WHERE username = @user";
 
-                        string insertData = "INSERT INTO users" + 
-                            "(username, password, data_register) " +
-                            "VALUES(@username, @password, @dateReg)";
-                        using(SqlCommand cmd = new SqlCommand(insertData, connect))
+                        using(SqlCommand checkUser = new SqlCommand(selectusername, connect))
                         {
-                            cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
-                            cmd.Parameters.AddWithValue("@password", signup_password.Text.Trim());
-                            cmd.Parameters.AddWithValue("@dateReg", today);
+                            checkUser.Parameters.AddWithValue("@user",signup_username.Text.Trim());
+                            int count = (int)checkUser.ExecuteScalar();
 
-                            MessageBox.Show("Registered Succsessfully",
-                                "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (count >= 1)
+                            {
+                                MessageBox.Show(signup_username.Text.Trim() + "is already taken", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                DateTime today = DateTime.Today;
+
+                                string insertData = "INSERT INTO users" +
+                                    "(username, password, data_register) " +
+                                    "VALUES(@username, @password, @dateReg)";
+                                using (SqlCommand cmd = new SqlCommand(insertData, connect))
+                                {
+                                    cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@password", signup_password.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@dateReg", today);
+
+                                    cmd.ExecuteNonQuery();
+
+                                    MessageBox.Show("Registered Succsessfully",
+                                        "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    Form1 loginForm = new Form1();
+                                    loginForm.Show();
+                                    this.Hide();
+                                }
+                            }
                         }
+
+
+                        
                     }
                     catch (Exception ex)
                     {
