@@ -43,6 +43,20 @@ namespace KeyManagementSystem
                     try
                     {
                         connect.Open();
+                        DateTime today = DateTime.Today;
+
+                        string insertData = "INSERT INTO users" + 
+                            "(username, password, data_register) " +
+                            "VALUES(@username, @password, @dateReg)";
+                        using(SqlCommand cmd = new SqlCommand(insertData, connect))
+                        {
+                            cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", signup_password.Text.Trim());
+                            cmd.Parameters.AddWithValue("@dateReg", today);
+
+                            MessageBox.Show("Registered Succsessfully",
+                                "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     catch (Exception ex)
                     {
