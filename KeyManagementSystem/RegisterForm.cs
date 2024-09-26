@@ -60,7 +60,7 @@ namespace KeyManagementSystem
                                 DateTime today = DateTime.Today;
 
                                 string insertData = "INSERT INTO users" +
-                                    "(username, password, data_register) " +
+                                    "(username, password, date_register) " +
                                     "VALUES(@username, @password, @dateReg)";
                                 using (SqlCommand cmd = new SqlCommand(insertData, connect))
                                 {
