@@ -23,5 +23,10 @@ namespace KeyManagementSystem
             regForm.Show();
             this.Hide();
         }
+
+        private void login_ShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            login_password.PasswordChar = login_ShowPass.Checked ? '\0' : '*';
+        }
     }
 }

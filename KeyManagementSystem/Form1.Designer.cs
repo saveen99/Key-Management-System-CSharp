@@ -148,6 +148,7 @@
             login_password.Location = new Point(468, 339);
             login_password.Multiline = true;
             login_password.Name = "login_password";
+            login_password.PasswordChar = '*';
             login_password.Size = new Size(241, 30);
             login_password.TabIndex = 6;
             // 
@@ -175,6 +176,7 @@
             login_ShowPass.TabIndex = 7;
             login_ShowPass.Text = "Show Password";
             login_ShowPass.UseVisualStyleBackColor = false;
+            login_ShowPass.CheckedChanged += login_ShowPass_CheckedChanged;
             // 
             // login_btn
             // 
