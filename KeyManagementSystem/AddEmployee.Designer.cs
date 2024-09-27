@@ -40,6 +40,10 @@
             label5 = new Label();
             label6 = new Label();
             comboBox2 = new ComboBox();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -58,6 +62,10 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ButtonHighlight;
+            panel2.Controls.Add(button4);
+            panel2.Controls.Add(button3);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button1);
             panel2.Controls.Add(comboBox2);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(textBox4);
@@ -158,6 +166,43 @@
             comboBox2.TabIndex = 10;
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
+            // button1
+            // 
+            button1.Location = new Point(164, 119);
+            button1.Name = "button1";
+            button1.Size = new Size(92, 36);
+            button1.TabIndex = 11;
+            button1.Text = "ADD";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(326, 119);
+            button2.Name = "button2";
+            button2.Size = new Size(92, 36);
+            button2.TabIndex = 12;
+            button2.Text = "UPDATE";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(471, 119);
+            button3.Name = "button3";
+            button3.Size = new Size(92, 36);
+            button3.TabIndex = 13;
+            button3.Text = "DELETE";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(617, 119);
+            button4.Name = "button4";
+            button4.Size = new Size(92, 36);
+            button4.TabIndex = 14;
+            button4.Text = "CLEAR";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // AddEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -189,5 +234,9 @@
         private TextBox textBox4;
         private Label label5;
         private ComboBox comboBox2;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
     }
 }
