@@ -67,6 +67,10 @@ namespace KeyManagementSystem
                             {
                                 MessageBox.Show("Login Successfully.!"
                                     , "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                MainForm mainForm = new MainForm();
+                                mainForm.Show();
+                                this.Hide();
                             }
                             else
                             {

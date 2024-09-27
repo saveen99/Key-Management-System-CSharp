@@ -19,7 +19,7 @@ namespace KeyManagementSystem
 
         private void exit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
