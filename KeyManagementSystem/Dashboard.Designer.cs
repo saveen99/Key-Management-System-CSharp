@@ -55,6 +55,7 @@
             // 
             // panel3
             // 
+            panel3.BackColor = SystemColors.GradientActiveCaption;
             panel3.Location = new Point(124, 35);
             panel3.Name = "panel3";
             panel3.Size = new Size(200, 100);
@@ -62,6 +63,7 @@
             // 
             // panel4
             // 
+            panel4.BackColor = SystemColors.GradientActiveCaption;
             panel4.Location = new Point(473, 35);
             panel4.Name = "panel4";
             panel4.Size = new Size(200, 100);
