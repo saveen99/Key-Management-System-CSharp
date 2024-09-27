@@ -36,6 +36,8 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            button4 = new Button();
+            label2 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -81,6 +83,8 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.GradientActiveCaption;
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
@@ -108,6 +112,7 @@
             button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 62, 134);
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 62, 134);
             button1.FlatStyle = FlatStyle.Flat;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(12, 229);
             button1.Name = "button1";
             button1.Size = new Size(200, 40);
@@ -127,7 +132,7 @@
             button2.Name = "button2";
             button2.Size = new Size(200, 40);
             button2.TabIndex = 3;
-            button2.Text = "DASHBOARD";
+            button2.Text = "ADD EMPLOYEE";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -142,9 +147,27 @@
             button3.Name = "button3";
             button3.Size = new Size(200, 40);
             button3.TabIndex = 4;
-            button3.Text = "DASHBOARD";
+            button3.Text = "HISTORY";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(12, 518);
+            button4.Name = "button4";
+            button4.Size = new Size(35, 35);
+            button4.TabIndex = 2;
+            button4.Text = "X";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(53, 528);
+            label2.Name = "label2";
+            label2.Size = new Size(53, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Sign Out";
             // 
             // MainForm
             // 
@@ -160,6 +183,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -174,5 +198,7 @@
         private Button button1;
         private Button button3;
         private Button button2;
+        private Button button4;
+        private Label label2;
     }
 }
