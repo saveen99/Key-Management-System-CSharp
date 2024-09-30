@@ -1,6 +1,6 @@
 ﻿namespace KeyManagementSystem
 {
-    partial class AddEmployee
+    partial class addEmployee1
     {
         /// <summary> 
         /// Required designer variable.
@@ -235,13 +235,13 @@
             label2.TabIndex = 0;
             label2.Text = "Name : ";
             // 
-            // AddEmployee
+            // addEmployee1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "AddEmployee";
+            Name = "addEmployee1";
             Size = new Size(875, 565);
             Load += AddEmployee_Load;
             panel1.ResumeLayout(false);

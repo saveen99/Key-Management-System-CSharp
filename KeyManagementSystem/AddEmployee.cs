@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KeyManagementSystem
 {
-    public partial class AddEmployee : UserControl
+    public partial class addEmployee1 : UserControl
     {
-        public AddEmployee()
+        public addEmployee1()
         {
             InitializeComponent();
         }

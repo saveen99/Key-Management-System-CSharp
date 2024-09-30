@@ -33,15 +33,19 @@
             exit = new Label();
             panel2 = new Panel();
             label2 = new Label();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            logout_btn = new Button();
+            keylog_btn = new Button();
+            addEmployee_btn = new Button();
+            dashboard_btn = new Button();
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
+            dashboard1 = new Dashboard();
+            addEmployee1 = new addEmployee1();
+            keylog1 = new keylog1();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -85,10 +89,10 @@
             // 
             panel2.BackColor = SystemColors.GradientActiveCaption;
             panel2.Controls.Add(label2);
-            panel2.Controls.Add(button4);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(logout_btn);
+            panel2.Controls.Add(keylog_btn);
+            panel2.Controls.Add(addEmployee_btn);
+            panel2.Controls.Add(dashboard_btn);
             panel2.Controls.Add(pictureBox1);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 35);
@@ -105,64 +109,65 @@
             label2.TabIndex = 2;
             label2.Text = "Sign Out";
             // 
-            // button4
+            // logout_btn
             // 
-            button4.Cursor = Cursors.Hand;
-            button4.Location = new Point(12, 518);
-            button4.Name = "button4";
-            button4.Size = new Size(35, 35);
-            button4.TabIndex = 2;
-            button4.Text = "X";
-            button4.UseVisualStyleBackColor = true;
+            logout_btn.Cursor = Cursors.Hand;
+            logout_btn.Location = new Point(12, 518);
+            logout_btn.Name = "logout_btn";
+            logout_btn.Size = new Size(35, 35);
+            logout_btn.TabIndex = 2;
+            logout_btn.Text = "X";
+            logout_btn.UseVisualStyleBackColor = true;
+            logout_btn.Click += logout_btn_Click;
             // 
-            // button3
+            // keylog_btn
             // 
-            button3.BackColor = SystemColors.GradientActiveCaption;
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderColor = Color.FromArgb(30, 62, 134);
-            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 62, 134);
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 62, 134);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(12, 321);
-            button3.Name = "button3";
-            button3.Size = new Size(200, 40);
-            button3.TabIndex = 4;
-            button3.Text = "HISTORY";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            keylog_btn.BackColor = SystemColors.GradientActiveCaption;
+            keylog_btn.Cursor = Cursors.Hand;
+            keylog_btn.FlatAppearance.BorderColor = Color.FromArgb(30, 62, 134);
+            keylog_btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 62, 134);
+            keylog_btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 62, 134);
+            keylog_btn.FlatStyle = FlatStyle.Flat;
+            keylog_btn.Location = new Point(12, 321);
+            keylog_btn.Name = "keylog_btn";
+            keylog_btn.Size = new Size(200, 40);
+            keylog_btn.TabIndex = 4;
+            keylog_btn.Text = "KEYLOG";
+            keylog_btn.UseVisualStyleBackColor = false;
+            keylog_btn.Click += button3_Click;
             // 
-            // button2
+            // addEmployee_btn
             // 
-            button2.BackColor = SystemColors.GradientActiveCaption;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = Color.FromArgb(30, 62, 134);
-            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 62, 134);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 62, 134);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(12, 275);
-            button2.Name = "button2";
-            button2.Size = new Size(200, 40);
-            button2.TabIndex = 3;
-            button2.Text = "ADD EMPLOYEE";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            addEmployee_btn.BackColor = SystemColors.GradientActiveCaption;
+            addEmployee_btn.Cursor = Cursors.Hand;
+            addEmployee_btn.FlatAppearance.BorderColor = Color.FromArgb(30, 62, 134);
+            addEmployee_btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 62, 134);
+            addEmployee_btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 62, 134);
+            addEmployee_btn.FlatStyle = FlatStyle.Flat;
+            addEmployee_btn.Location = new Point(12, 275);
+            addEmployee_btn.Name = "addEmployee_btn";
+            addEmployee_btn.Size = new Size(200, 40);
+            addEmployee_btn.TabIndex = 3;
+            addEmployee_btn.Text = "ADD EMPLOYEE";
+            addEmployee_btn.UseVisualStyleBackColor = false;
+            addEmployee_btn.Click += button2_Click;
             // 
-            // button1
+            // dashboard_btn
             // 
-            button1.BackColor = SystemColors.GradientActiveCaption;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(30, 62, 134);
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 62, 134);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 62, 134);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(12, 229);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 40);
-            button1.TabIndex = 2;
-            button1.Text = "DASHBOARD";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            dashboard_btn.BackColor = SystemColors.GradientActiveCaption;
+            dashboard_btn.Cursor = Cursors.Hand;
+            dashboard_btn.FlatAppearance.BorderColor = Color.FromArgb(30, 62, 134);
+            dashboard_btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 62, 134);
+            dashboard_btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 62, 134);
+            dashboard_btn.FlatStyle = FlatStyle.Flat;
+            dashboard_btn.ImageAlign = ContentAlignment.MiddleLeft;
+            dashboard_btn.Location = new Point(12, 229);
+            dashboard_btn.Name = "dashboard_btn";
+            dashboard_btn.Size = new Size(200, 40);
+            dashboard_btn.TabIndex = 2;
+            dashboard_btn.Text = "DASHBOARD";
+            dashboard_btn.UseVisualStyleBackColor = false;
+            dashboard_btn.Click += button1_Click;
             // 
             // pictureBox1
             // 
@@ -176,11 +181,35 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(dashboard1);
+            panel3.Controls.Add(addEmployee1);
+            panel3.Controls.Add(keylog1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(225, 35);
             panel3.Name = "panel3";
             panel3.Size = new Size(875, 565);
             panel3.TabIndex = 2;
+            // 
+            // dashboard1
+            // 
+            dashboard1.Location = new Point(0, 0);
+            dashboard1.Name = "dashboard1";
+            dashboard1.Size = new Size(875, 565);
+            dashboard1.TabIndex = 12;
+            // 
+            // addEmployee1
+            // 
+            addEmployee1.Location = new Point(0, 0);
+            addEmployee1.Name = "addEmployee1";
+            addEmployee1.Size = new Size(875, 565);
+            addEmployee1.TabIndex = 12;
+            // 
+            // keylog1
+            // 
+            keylog1.Location = new Point(0, 0);
+            keylog1.Name = "keylog1";
+            keylog1.Size = new Size(875, 565);
+            keylog1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -200,6 +229,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -210,11 +240,14 @@
         private Label label1;
         private Panel panel2;
         private PictureBox pictureBox1;
-        private Button button1;
-        private Button button3;
-        private Button button2;
-        private Button button4;
+        private Button dashboard_btn;
+        private Button keylog_btn;
+        private Button addEmployee_btn;
+        private Button logout_btn;
         private Label label2;
         private Panel panel3;
+        private keylog1 keylog1;
+        private addEmployee1 addEmployee1;
+        private Dashboard dashboard1;
     }
 }

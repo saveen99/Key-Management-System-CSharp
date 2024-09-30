@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KeyManagementSystem
 {
-    public partial class Keylog : UserControl
+    public partial class keylog1 : UserControl
     {
-        public Keylog()
+        public keylog1()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace KeyManagementSystem
 {
-    partial class Keylog
+    partial class keylog1
     {
         /// <summary> 
         /// Required designer variable.
@@ -51,13 +51,13 @@
             dataGridView1.Size = new Size(832, 478);
             dataGridView1.TabIndex = 1;
             // 
-            // Keylog
+            // keylog1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
             Controls.Add(label1);
-            Name = "Keylog";
+            Name = "keylog1";
             Size = new Size(875, 565);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
