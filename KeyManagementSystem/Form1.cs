@@ -71,6 +71,7 @@ namespace KeyManagementSystem
                                 MainForm mainForm = new MainForm();
                                 mainForm.Show();
                                 this.Hide();
+
                             }
                             else
                             {
